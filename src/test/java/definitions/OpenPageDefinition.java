@@ -1,18 +1,16 @@
 package definitions;
 
-import abilities.OpenBrowserAbility;
+import Tasks.OpenPageTask;
 import io.cucumber.java.en.Given;
-import net.serenitybdd.screenplay.Actor;
-import utilities.ChromeWebDriver;
 
 public class OpenPageDefinition {
 	
-	ChromeWebDriver chromeDriver;
-
+	OpenPageTask openPageTask;
+	
 	@Given("abra la pagina de One Drive")
 	public void openPage() {
-		Actor actor = Actor.named("Automation");
-		actor.attemptsTo(OpenBrowserAbility.onPage("https://www.onedrive.com"));
+		OpenPageTask openPageTask = new OpenPageTask("Automation", "https://www.onedrive.com");
+		openPageTask.openPage();
     }
 
 }
