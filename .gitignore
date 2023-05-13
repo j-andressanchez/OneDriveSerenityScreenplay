@@ -5,3 +5,5 @@
 /.scannerwork/
 
 .scannerwork/report-task.txt
+
+.classpath
